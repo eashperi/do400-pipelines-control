@@ -5,6 +5,7 @@ pipeline {
 		}
     }
     stages {
+	  parallel {	
 		stage ('Run Tests') {
         	stage('Backend Tests') {
        		    steps {
@@ -17,5 +18,6 @@ pipeline {
  			   }
 			}
   		 }
+	  }	      
 	}
 }
